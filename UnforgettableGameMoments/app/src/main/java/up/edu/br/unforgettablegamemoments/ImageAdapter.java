@@ -43,7 +43,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
         image.setImageResource(imageItem.getImage());
 
         name.setText(imageItem.getName());
-        date.setText(imageItem.getDate().toString());
+        date.setText(imageItem.getDate());
 
     }
 

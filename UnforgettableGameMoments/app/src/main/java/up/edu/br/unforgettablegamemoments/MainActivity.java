@@ -20,10 +20,10 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.rView);
         imagesList = new ArrayList<>();
-        imagesList.add(new Image(R.drawable.skyrim,"Skyrim","17/11/2019"));
-        imagesList.add(new Image(R.drawable.crash,"Crash","17/11/2019"));
-        imagesList.add(new Image(R.drawable.witcher,"The Witcher 3","17/11/2019"));
-        imagesList.add(new Image(R.drawable.darksouls,"Dark Souls","17/11/2019"));
+        imagesList.add(new Image(R.drawable.skyrim,"Skyrim"));
+        imagesList.add(new Image(R.drawable.crash,"Crash"));
+        imagesList.add(new Image(R.drawable.witcher,"The Witcher 3"));
+        imagesList.add(new Image(R.drawable.darksouls,"Dark Souls"));
 
 
         LinearLayoutManager layautManager = new LinearLayoutManager(this);
