@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         imagesList = new ArrayList<>();
         imagesList.add(new Image(R.drawable.skyrim,"Skyrim","Dragão"));
         imagesList.add(new Image(R.drawable.crash,"Crash","1ª Fase"));
-        imagesList.add(new Image(R.drawable.witcher,"The Witcher 3","Cavalo Voador!"));
+        imagesList.add(new Image(R.drawable.witcher,"The Witcher 3","Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!"));
         imagesList.add(new Image(R.drawable.darksouls,"Dark Souls","Atirador!"));
 
 
