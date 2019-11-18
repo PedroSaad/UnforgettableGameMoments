@@ -39,11 +39,13 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
         ImageView image = holder.item_image;
         TextView name = holder.item_name;
         TextView date = holder.item_date;
+        TextView description = holder.item_description;
 
         image.setImageResource(imageItem.getImage());
 
         name.setText(imageItem.getName());
         date.setText(imageItem.getDate());
+        description.setText(imageItem.getDescription());
 
     }
 
@@ -57,6 +59,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
         ImageView item_image;
         TextView item_date;
         TextView item_name;
+        TextView item_description;
 
         public ViewHolder(View itemView){
             super(itemView);
@@ -64,6 +67,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
             item_image = itemView.findViewById(R.id.item_image);
             item_name = itemView.findViewById(R.id.item_name);
             item_date = itemView.findViewById(R.id.item_date);
+            item_description = itemView.findViewById(R.id.item_description);
 
 
         }

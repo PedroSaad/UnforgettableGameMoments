@@ -5,49 +5,62 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
-        android:padding="5dp"
         android:layout_width="match_parent"
+        android:layout_height="332dp"
         android:layout_margin="10dp"
-        android:layout_height="match_parent">
+        android:orientation="vertical"
+        android:padding="5dp">
 
         <ImageView
             android:id="@+id/item_image"
-            android:layout_width="280dp"
-            android:layout_height="128dp"
+            android:layout_width="372dp"
+            android:layout_height="205dp"
             android:scaleType="centerCrop"
             android:src="@drawable/darksouls" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="372dp"
+            android:layout_height="117dp"
             android:orientation="vertical">
 
             <TextView
-                android:layout_marginLeft="5dp"
                 android:id="@+id/item_name"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/capsule"
-                android:layout_width="82dp"
+                android:layout_width="357dp"
                 android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_weight="2"
+                android:background="@drawable/capsule"
                 android:gravity="center"
-                android:textColor="@color/colorAccent"
                 android:text="Game Name"
-                android:textSize="14sp"/>
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/item_description"
+                android:layout_width="357dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+                android:background="@drawable/capsule"
+                android:gravity="center"
+                android:text="Description"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/item_date"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/capsule"
-                android:layout_width="82dp"
+                android:layout_width="359dp"
                 android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_weight="2"
+                android:background="@drawable/capsule"
                 android:gravity="center"
-                android:textColor="@color/colorAccent"
                 android:text="Image Date"
-                android:textSize="14sp"/>
-
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
 
 
         </LinearLayout>

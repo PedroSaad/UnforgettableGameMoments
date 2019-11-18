@@ -30,7 +30,7 @@
                 android:contentDescription="@string/app_name"
                 android:fitsSystemWindows="true"
                 android:scaleType="centerCrop"
-                android:src="@drawable/darksouls" />
+                android:src="@drawable/skyrim" />
 
         </androidx.appcompat.widget.Toolbar>
 

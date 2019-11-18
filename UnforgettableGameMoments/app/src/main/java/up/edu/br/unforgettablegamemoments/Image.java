@@ -7,14 +7,16 @@ public class Image {
 
     private  int image;
     private  String name;
+    private String description;
     private String date;
 
-    public Image(int image, String name) {
+    public Image(int image, String name, String description) {
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
         this.image = image;
         this.name = name;
         this.date = formatter.format(date);
+        this.description = description;
     }
 
     public int getImage() {
@@ -39,5 +41,13 @@ public class Image {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
