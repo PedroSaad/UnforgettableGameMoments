@@ -5,8 +5,8 @@ import java.util.Date;
 
 public class Image {
 
-    private  int image;
-    private  String name;
+    private int image;
+    private String name;
     private String description;
     private String date;
 
