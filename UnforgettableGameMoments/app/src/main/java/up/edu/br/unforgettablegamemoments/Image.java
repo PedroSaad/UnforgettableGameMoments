@@ -18,6 +18,11 @@ public class Image {
         this.date = formatter.format(date);
         this.description = description;
     }
+    public Image(){
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        this.date = formatter.format(date);
+    }
 
     public int getImage() {
         return image;
