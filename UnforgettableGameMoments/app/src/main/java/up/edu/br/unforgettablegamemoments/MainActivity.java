@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import java.util.ArrayList;
@@ -33,5 +34,12 @@ public class MainActivity extends AppCompatActivity {
 
         ImageAdapter adapter = new ImageAdapter(this, imagesList);
         recyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(MainActivity.this, MainActivity.class );
+        startActivity(i);
     }
 }
