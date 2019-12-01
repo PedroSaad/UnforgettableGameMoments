@@ -98,7 +98,7 @@ public class RegisterImage extends AppCompatActivity {
         Image i = new Image();
         i.setName(txtName.getText().toString());
         i.setDescription(txtDescription.getText().toString());
-        i.setImageSrc(downloadImage);
+        i.setImageSrc("images/" + secret +".jpg");
 
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
         mDatabase.child("images").push().setValue(i);
