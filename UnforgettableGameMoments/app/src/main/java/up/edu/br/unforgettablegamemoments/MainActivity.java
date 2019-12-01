@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.ArrayList;
 
@@ -21,10 +22,10 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.rView);
         imagesList = new ArrayList<>();
-        imagesList.add(new Image(R.drawable.skyrim,"Skyrim","Dragão"));
-        imagesList.add(new Image(R.drawable.crash,"Crash","1ª Fase"));
-        imagesList.add(new Image(R.drawable.witcher,"The Witcher 3","Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!"));
-        imagesList.add(new Image(R.drawable.darksouls,"Dark Souls","Atirador!"));
+//        imagesList.add(new Image(R.drawable.skyrim,"Skyrim","Dragão"));
+//        imagesList.add(new Image(R.drawable.crash,"Crash","1ª Fase"));
+//        imagesList.add(new Image(R.drawable.witcher,"The Witcher 3","Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!Cavalo Voador!"));
+//        imagesList.add(new Image(R.drawable.darksouls,"Dark Souls","Atirador!"));
 
 
         LinearLayoutManager layautManager = new LinearLayoutManager(this);
@@ -40,6 +41,17 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         Intent i = new Intent(MainActivity.this, MainActivity.class );
+        startActivity(i);
+    }
+
+    public void abrirMain(View view) {
+        Intent i = new Intent(MainActivity.this, MainActivity.class );
+        startActivity(i);
+    }
+
+
+    public void abrirNovaImagem(View view) {
+        Intent i = new Intent(MainActivity.this, RegisterImage.class );
         startActivity(i);
     }
 }

@@ -7,7 +7,7 @@
         android:id="@+id/iVImage"
         android:layout_width="match_parent"
         android:layout_height="205dp"
-        android:scaleType="centerCrop"
+        android:scaleType="centerInside"
         android:src="@drawable/crash" />
 
     <Button
@@ -18,14 +18,14 @@
         android:text="Selecionar Imagem" />
 
     <EditText
-        android:id="@+id/txtNome"
+        android:id="@+id/txtName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nome do Jogo"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/txtDescricao"
+        android:id="@+id/txtDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Descrição da Imagem"

@@ -5,15 +5,15 @@ import java.util.Date;
 
 public class Image {
 
-    private int image;
+    private String imageSrc;
     private String name;
     private String description;
     private String date;
 
-    public Image(int image, String name, String description) {
+    public Image(String imageSrc, String name, String description) {
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-        this.image = image;
+        this.imageSrc = imageSrc;
         this.name = name;
         this.date = formatter.format(date);
         this.description = description;
@@ -22,14 +22,6 @@ public class Image {
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
         this.date = formatter.format(date);
-    }
-
-    public int getImage() {
-        return image;
-    }
-
-    public void setImage(int image) {
-        this.image = image;
     }
 
     public String getName() {
@@ -54,5 +46,13 @@ public class Image {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getImageSrc() {
+        return imageSrc;
+    }
+
+    public void setImageSrc(String imageSrc) {
+        this.imageSrc = imageSrc;
     }
 }

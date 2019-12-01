@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UnforgettableGameMoments</string>
+    <string name="app_name">GameMoments</string>
     <string name="facebook_app_id">430563924504766</string>
     <string name="fb_login_protocol_scheme">fb430563924504766</string>
 </resources>

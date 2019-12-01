@@ -3,11 +3,9 @@ package up.edu.br.unforgettablegamemoments;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -31,12 +29,11 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         inicializarComponente();
         inicializarFirebaseCalback();
         ClickButton();
-
     }
+
 
     private void ClickButton() {
         mLoginButton.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
@@ -63,15 +60,14 @@ public class LoginActivity extends AppCompatActivity {
 
         AuthCredential credential = FacebookAuthProvider.getCredential(accessToken.getToken());
 
-
         mFirebaseAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            Intent i = new Intent(LoginActivity.this, MainActivity.class );
+                        if (task.isSuccessful()) {
+                            Intent i = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(i);
-                        }else{
+                        } else {
                             alert("Erro de autenticação com firebase");
                         }
                     }

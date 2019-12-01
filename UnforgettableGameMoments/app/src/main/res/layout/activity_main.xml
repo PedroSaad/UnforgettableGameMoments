@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnCreate"
+                android:layout_width="182dp"
+                android:layout_height="40dp"
+                android:background="@color/colorPrimary"
+                android:onClick="abrirNovaImagem"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/ic_add" />
+
+            <ImageButton
+                android:id="@+id/btnMain"
+                android:layout_width="217dp"
+                android:layout_height="45dp"
+                android:background="@color/colorPrimary"
+                android:onClick="abrirMain"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/ic_house" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
     <androidx.core.widget.NestedScrollView
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="51dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
