@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 
@@ -21,6 +23,10 @@ import com.google.firebase.storage.StorageReference;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,8 +34,6 @@ public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ArrayList<Image> imagesList;
-    FirebaseStorage storage;
-    StorageReference storageReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,9 +56,28 @@ public class MainActivity extends AppCompatActivity {
                     String date = ds.child("date").getValue(String.class);
                     String imageSrc = ds.child("imageSrc").getValue(String.class);
 
-                    imagesList.add(new Image( imageSrc, name,description,date,R.drawable.crash));
-                    imagesList.add(new Image( "aaa", "aaaa","dddd","41",R.drawable.crash));
+//                    Bitmap image = null;
+//                    URL url = null;
+//                    try {
+//                        url = new URL(imageSrc);
+//                    } catch (MalformedURLException e) {
+//                        e.printStackTrace();
+//                    }
+//                    HttpURLConnection conexao = null;
+//                    try {
+//                        conexao = (HttpURLConnection) url.openConnection();
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
+//                    InputStream input = null;
+//                    try {
+//                        input = conexao.getInputStream();
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
+//                    image = BitmapFactory.decodeStream(input);
 
+                    imagesList.add(new Image( imageSrc, name,description,date,R.drawable.witcher));
                 }
             }
 
@@ -65,10 +88,10 @@ public class MainActivity extends AppCompatActivity {
 
         //HARDCODE para colocar imgagens na tela
 
-        imagesList.add(new Image("Skyrim","Dragão","aaa","aaaa",R.drawable.skyrim));
-        imagesList.add(new Image("Skyrim","Dragão","aaa","aaaa",R.drawable.skyrim));
-        imagesList.add(new Image("Skyrim","Dragão","aaa","aaaa",R.drawable.skyrim));
-        imagesList.add(new Image("Skyrim","Dragão","aaa","aaaa",R.drawable.skyrim));
+       imagesList.add(new Image("Skyrim","Dragão","aaa","aaaa",R.drawable.skyrim));
+//        imagesList.add(new Image("The Witcher 3","The Witcher 3","Olha este cavalo voando","29/11/2019",R.drawable.witcher));
+//        imagesList.add(new Image("Crash","Crash Bandicoot","Nostalgia!","28/11/2019",R.drawable.crash));
+//        imagesList.add(new Image("Skyrim","Dragão","aaa","aaaa",R.drawable.skyrim));
 
 
         LinearLayoutManager layautManager = new LinearLayoutManager(this);

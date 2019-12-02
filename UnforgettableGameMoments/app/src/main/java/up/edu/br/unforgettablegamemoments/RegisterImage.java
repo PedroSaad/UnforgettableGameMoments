@@ -98,7 +98,8 @@ public class RegisterImage extends AppCompatActivity {
         Image i = new Image();
         i.setName(txtName.getText().toString());
         i.setDescription(txtDescription.getText().toString());
-        i.setImageSrc("images/" + secret +".jpg");
+        i.setImageSrc("https://firebasestorage.googleapis.com/v0/b/aulafirebase-58723.appspot.com/o/images%2F"+secret+
+                ".jpg?alt=media");
 
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
         mDatabase.child("images").push().setValue(i);
@@ -127,8 +128,10 @@ public class RegisterImage extends AppCompatActivity {
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             progressDialog.dismiss();
                             Toast.makeText(RegisterImage.this, "Uploaded", Toast.LENGTH_SHORT).show();
-//                            StorageReference httpsReference = storage.getReferenceFromUrl("https://firebasestorage.googleapis.com/b/bucket/o/images%"+secret+".jpg");
                             downloadImage = ref.getDownloadUrl().toString();
+//                            downloadImage = taskSnapshot.getMetadata().getReference().getDownloadUrl().toString();
+
+
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
